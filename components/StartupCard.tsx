@@ -9,7 +9,7 @@ const StartupCard = ({ post }: StartupCardType) => {
   const {
     _createdAt,
     views,
-    author: { _id: authorId, name: authorName },
+    author: { _id: authorId, name: authorName, image: authorImage },
     title,
     image,
     category,
@@ -37,7 +37,7 @@ const StartupCard = ({ post }: StartupCardType) => {
         </div>
         <Link href={`/user/${authorId}`}>
           <Image
-            src="https://placehold.co/48x48"
+            src={authorImage}
             alt="placeholder"
             width={48}
             height={48}
