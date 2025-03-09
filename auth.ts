@@ -8,7 +8,9 @@ const bios = [
   "Loves coding and coffee ☕",
   "Always learning something new!",
   "Exploring the world of technology 🌍",
-];
+] as const;
+
+type Bio = (typeof bios)[number];
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
@@ -37,7 +39,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           username: email?.split("@")[0],
           email,
           image,
-          bio: bios[Math.floor(Math.random() * bios.length)],
+          bio: bios[Math.floor(Math.random() * bios.length)] as Bio,
         });
       }
 
