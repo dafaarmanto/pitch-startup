@@ -8,6 +8,11 @@ const bios = [
   "Loves coding and coffee ☕",
   "Always learning something new!",
   "Exploring the world of technology 🌍",
+  "Passionate about open-source projects",
+  "Tech enthusiast and gadget lover",
+  "Enjoys solving complex problems",
+  "Avid reader and lifelong learner",
+  "Believes in the power of teamwork",
 ] as const;
 
 type Bio = (typeof bios)[number];
